@@ -1,0 +1,99 @@
+@media screen and (max-width: 105em) { /* 1680 px */
+    .send-fill::after {
+        opacity: 0;
+    }
+
+    .contato form input[type="text"],
+    .contato form label {
+        width: 80%;
+    }
+
+    .btn {
+        width: 80%;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 52.56em) { /* 840,96 px*/
+
+    .logo a {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul{
+        text-align: center;
+    }
+
+    nav ul li{
+        width: 100%;
+        padding: .5em 0;
+    }
+
+    nav ul li a::before{
+        transform-origin: center; 
+        left: 25%;
+        width: 50%;
+    }
+
+    .menu-fixed {
+        height: 20% !important; 
+    }
+
+    .menu-fixed .logo{
+        display: none;
+    }
+
+    footer a,
+    footer li,
+    footer h3,
+    footer .rede-social{
+        text-align: center;
+    }
+
+    footer #instagram::before,
+    footer #facebook::before,
+    footer #linkedin::before,
+    footer #youtube::before{
+        top:-20%;
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 62.5em) { /* 1000 px*/
+    .row {
+        flex-flow: column wrap;
+    }
+
+    .iframe,
+    .contato {
+        width: 100%;
+    }
+
+    .iframe-texto h2 {
+        font-size: 2em;
+    }
+
+    .iframe-texto p {
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    .iframe {
+        padding-bottom: 1em;
+    }
+
+    .menu-fixed{
+        height: 37%;
+        border-radius: 0 0 5px 5px;
+    }
+
+
+
+
+}

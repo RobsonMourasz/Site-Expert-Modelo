@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --corTextoDark: black;
+    --corTextoLite: white;
+    --backgroundDark: #444;
+    --backgroundLite: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    /* background-color: var(--backgroundDark); */
+    background-color: var(--backgroundLite);
+}
+
+header{
+    animation: transition-off-fixed .2s reverse forwards;
+}
+
+.nav{
+    color: var(--corTextoDark);
+    width: 100%;
+    margin: auto 0 ;
+}
+
+nav ul {
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--corTexto);
+    padding: 0 1em ;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    scale: 1;
+    transition: scale .5s ease-in-out;
+
+}
+
+nav ul li a:hover{
+    scale: 1.2;
+}
+
+nav ul li a::before{
+    top: 1.5em;
+    left: 0;
+    position: absolute;
+    content: "";
+    width: 9.4em;
+    height: .2em;
+    background-image: radial-gradient(#9a082f, #f40034);
+    scale: 0 1;
+    transform-origin: left;
+    transition: scale .5s ease-in-out;
+}
+
+nav ul li a:hover::before{
+    scale: 1;
+}
+
+/* <! -- FIM DA NAV */
+
+.iframe,
+.contato{
+    width: 50%;
+    color: var(--corTextoDark);
+}
+
+.iframe-texto h2{
+    text-shadow: 2px 2px 7px rgba(4, 4, 4, .7);
+    font-size: 3em;
+    padding: .5em 1em;
+}
+
+.iframe-texto p{
+    font-size: 1.3em;
+    padding: 0 1em 2em 0;
+}
+
+
+.contato form{
+   height: 100%;
+   width: 100%;
+   display: inline-block;
+   align-content: center;
+}
+
+.contato form input[type="text"]{
+    margin: .5em  auto;
+    width: 50%;
+    padding: .5em 1em;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid var(--backgroundDark);
+    transition: width 1s ease-in-out;
+}
+
+.contato form label{
+    text-align: left;
+    width: 50%;
+    margin: auto;
+    padding-left: .5em;
+    color: var(--corTextoDark);
+    transition: width 1s ease-in-out;
+
+}
+.contato form label::after{
+    content: "*";
+    color: red;
+    padding-left: .5em;
+}
+
+.contato form input[type="submit"]{
+    position: relative;
+    margin: 1.5em auto 0 auto;
+}
+
+.send-fill{
+    position: relative;
+}
+
+.send-fill::after{
+    position: absolute;
+    content: "";
+    background-image: url('IMG/send-fill.svg'); filter: invert(100%);
+    background-size: 1.3em;
+    bottom: 18%;
+    left: 68%;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.content{
+    padding: 2em 0;
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+.card{
+    width: 200px;
+    margin: .5em;
+    flex-flow: 1 1 1 auto ;
+    flex-grow: 1;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--backgroundDark);
+}
+
+.card > img{
+padding: .5em;
+}
+
+.card > h3{
+    text-transform: uppercase;
+    padding: .5em;
+}
+
+.card > p{
+    text-align: justify;
+    margin: .5em;
+    font-size: .9em;
+}
+
+.funcionalidades .card:last-child p{
+    text-align: center;
+}
+
+/* <!-- FIM DO BANNER */
+
+/* <!-- FOOTER */
+
+footer{
+    background-color: var(--backgroundDark);
+    color: var(--backgroundLite);
+}
+
+footer h3{
+    color:#f40034;
+    font-size: 1.5em;
+}
+
+footer ul,
+footer a{
+    text-align: justify;
+    color: var(--backgroundLite);
+    text-decoration: none;
+    list-style: none;
+}
+
+footer li{
+    margin: 1em 0;
+}
+
+footer li a:hover,
+footer .rede-social ~ a:hover{
+    color: #f40034;
+}
+
+footer .rede-social{
+    text-align: justify;
+}
+
+footer .rede-social ~ a {
+    margin: .5em 0;
+    position: relative;
+}
+
+footer #instagram::before{
+    position: absolute;
+    content: "";
+    opacity: .7;
+    background-image: url('./IMG/Icons/instagram-50x50.png');
+    background-size: 25px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    left: -15%;
+    top: -20%;
+
+}
+
+footer #facebook::before{
+    position: absolute;
+    content: "";
+    opacity: .7;
+    background-image: url('./IMG/Icons/facebook-50x50.png');
+    background-size: 25px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    left: -15%;
+    top: -20%;
+
+}
+
+footer #linkedin::before{
+    position: absolute;
+    content: "";
+    opacity: .7;
+    background-image: url('./IMG/Icons/linkedin-50x50.png');
+    background-size: 25px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    left: -15%;
+    top: -20%;
+
+}
+
+footer #youtube::before{
+    position: absolute;
+    content: "";
+    opacity: .7;
+    background-image: url('./IMG/Icons/youtube-50x50.png');
+    background-size: 25px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    left: -15%;
+    top: -20%;
+
+}
+
+/* <!-- FIM DO FOOTER  */
+.w-80{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.w-100{
+    width: 100%;
+    right: 0;
+    top: 0;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.col{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.row{
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 0 0 1 auto ;
+}
+
+.row-reverse{
+    flex-direction: row-reverse;
+}
+
+.center{
+    text-align: center;
+}
+
+.btn{
+    width: 50%;
+    border-radius: 20px;
+    padding: .5em;
+    color: var(--corTextoDark);
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-center{
+    margin: 0 auto;
+    border: 2px solid #9a082f;
+    box-shadow: 2px 0px 10px #f40035a1;
+    outline: none;
+    font-size: 1.2em;
+}
+
+.btn-sucess{
+    background-image: radial-gradient(#f40034,#9a082f);
+    color: var(--corTextoLite);
+}
+
+.menu-fixed{
+    position: fixed;
+    animation: transition-on-fixed 2s ease-in-out forwards;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.pad-top-4{
+    padding-top: 4em;
+}
+
+.active{
+    color:red;
+    font-weight: 600;
+}
+
+
+
+@keyframes transition-on-fixed {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+
+@keyframes transition-off-fixed {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+
+    }
+}
